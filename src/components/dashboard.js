@@ -4,10 +4,27 @@ import { BiUser } from "react-icons/bi";
 
 import Logout from "./logout";
 import { Link } from "react-router-dom";
-
+import { useState } from "react";
+import axios from "axios";
 const Action = () => {
   const userId = localStorage.getItem("userId");
   const userName = userId.split("@")[0];
+  const [states, setStates] = useState([]);
+
+      axios.get("https://blogs-mboi.onrender.com/api/blogs",
+        {
+          headers: {
+            Authorization: localStorage.getItem("token")
+          }
+        })
+        .then(async function (response) {
+          setStates(response.data.reverse());
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    
+ 
 
 
 
@@ -36,10 +53,20 @@ const Action = () => {
             </div>
           </div>
         </nav>
-       
-      </div>
-      <div className="headerbtmline"></div>
 
+      </div>
+      <div className="propertycontainer">
+        {/* {console.log((state))} */}
+        {states.map(post => {
+          return <div>
+            {post.title}<br />
+            {post.createdAt}
+            {post.description}<br />
+            {post.author}<br />
+
+          </div>
+        })}
+      </div>
     </>
 
   )
