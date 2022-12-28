@@ -12,7 +12,7 @@ const Create = () => {
     const addPost = (e) => {
         e.preventDefault();
 
-        axios.post('https://real-estate-backend-1.onrender.com/api/property', formData,
+        axios.post('https://blogs-mboi.onrender.com/api/blogs', formData,
             {
                 headers: {
                     authorization: localStorage.getItem('token')

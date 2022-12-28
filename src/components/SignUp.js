@@ -27,7 +27,7 @@ function Signup() {
         const { email, password } = sigupDetails;
 
         axios
-            .post("https://real-estate-backend-1.onrender.com/api/user/signup", {
+            .post("https://blogs-mboi.onrender.com/api/user/signup", {
                 email: email,
                 password: password,
             })
