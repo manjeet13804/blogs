@@ -36,9 +36,9 @@ const Action = () => {
             </div>
           </div>
         </nav>
-        <UserBlogs/>
+       
       </div>
-
+      <UserBlogs/>
       <div className="headerbtmline"></div>
     </>
 

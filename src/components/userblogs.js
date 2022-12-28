@@ -21,14 +21,22 @@ const UserBlogs = () => {
           console.log(error);
         });
     }
-  }, [state]);
+  }, []);
 
 
   return (
     <>
       <div className="propertycontainer">
-        {console.log((state.title))}
-{/* {state.map()} */}
+        {/* {console.log((state))} */}
+        {state.map(post => {
+          return <div>
+            {post.title}<br/>
+            {post.createdAt}
+            {post.description}<br/>
+            {post.author}<br/>
+            
+          </div>
+        })}
       </div>
     </>
   );
