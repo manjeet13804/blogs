@@ -4,7 +4,7 @@ import { BiUser } from "react-icons/bi";
 
 import Logout from "./logout";
 import { Link } from "react-router-dom";
-import UserBlogs from "./userblogs";
+
 const Action = () => {
   const userId = localStorage.getItem("userId");
   const userName = userId.split("@")[0];
@@ -39,7 +39,7 @@ const Action = () => {
        
       </div>
       <div className="headerbtmline"></div>
- <UserBlogs/>
+
     </>
 
   )
