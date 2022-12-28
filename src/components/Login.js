@@ -19,7 +19,7 @@ const Login = () => {
         }
         localStorage.setItem('userId', DATA.email)
 
-        axios.post('hhttps://blogs-mboi.onrender.com/api/user/login', DATA)
+        axios.post('https://blogs-mboi.onrender.com/api/user/login', DATA)
 
             .then(function (response) {
                 // console.log(DATA,response)
